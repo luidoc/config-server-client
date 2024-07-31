@@ -1,0 +1,19 @@
+spring:
+    main:
+        allow-bean-definition-overriding: true
+    profiles:
+      active: dev
+    application:
+        name: config-server-client
+    config:
+        import: optional:configserver=${spring.cloud.config.url}
+    cloud:
+        config:
+            url: http://localhost:8888
+            uri: http://localhost:8888
+            username: root
+            password: 'password'
+            name: ${spring.application.name}
+            profile: dev
+logging:
+    config: ${spring.cloud.config.url}/${spring.application.name}/${spring.cloud.config.profile}/${spring.cloud.config.label}/log4j2-spring.xml?resolvePlaceholders=false

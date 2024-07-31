@@ -1,0 +1,6 @@
+app:
+  version: config-server-client
+key: config-server-client - 1
+nested.test1: property-test-1
+nested.test2: property-test-2
+nested.objeto.test3: property-object-3
