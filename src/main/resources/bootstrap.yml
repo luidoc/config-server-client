@@ -15,5 +15,9 @@ spring:
             password: 'password'
             name: ${spring.application.name}
             profile: dev
+            label: main
 logging:
     config: ${spring.cloud.config.url}/${spring.application.name}/${spring.cloud.config.profile}/${spring.cloud.config.label}/log4j2-spring.xml?resolvePlaceholders=false
+log4j2:
+    Configuration:
+        allowedProtocols: 'http,https'
