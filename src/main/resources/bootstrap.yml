@@ -21,3 +21,5 @@ logging:
 log4j2:
     Configuration:
         allowedProtocols: 'http,https'
+        username: 'root'
+        password: 'password'
