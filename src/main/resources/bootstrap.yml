@@ -18,8 +18,17 @@ spring:
             label: main
 logging:
     config: ${spring.cloud.config.url}/${spring.application.name}/${spring.cloud.config.profile}/${spring.cloud.config.label}/log4j2-spring.xml?resolvePlaceholders=false
+    allowedProtocols: 'http,https'
+    auth:
+        username: ${spring.cloud.config.username}
+        password: ${spring.cloud.config.password}
 log4j2:
     Configuration:
         allowedProtocols: 'http,https'
-        username: 'root'
-        password: 'password'
+#logging:
+#    config: ${spring.cloud.config.url}/${spring.application.name}/${spring.cloud.config.profile}/${spring.cloud.config.label}/log4j2-spring.xml?resolvePlaceholders=false
+#log4j2:
+#    Configuration:
+#        allowedProtocols: 'http,https'
+#        username: 'root'
+#        password: 'password'
